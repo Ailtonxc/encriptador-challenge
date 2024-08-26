@@ -25,13 +25,24 @@ function convert(input_text) {
   input_text = input_text.toLowerCase();
 
   for (let index = 0; index < letters_matrix.length; index++)
-    if (decrypt_flag) input_text = input_text.replaceAll(letters_matrix[index][1], letters_matrix[index][0]);
-    else input_text = input_text.replaceAll(letters_matrix[index][0], letters_matrix[index][1]);
+    if (decrypt_flag)
+      input_text = input_text.replaceAll(
+        letters_matrix[index][1],
+        letters_matrix[index][0]
+      );
+    else
+      input_text = input_text.replaceAll(
+        letters_matrix[index][0],
+        letters_matrix[index][1]
+      );
 
   return input_text;
 }
 
 input_from.addEventListener("keyup", (e) => {
+  e.target.value = e.target.value
+    .normalize("NFD")
+    .replace(/[\u0300-\u036f]/g, ""); // Restringir tildes
   input_to.value = convert(e.target.value);
 });
 
