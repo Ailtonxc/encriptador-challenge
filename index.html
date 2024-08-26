@@ -29,6 +29,103 @@
           </svg>
         </a>
       </header>
+      <main class="main">
+        <section class="main__top">
+          <div class="main__top__from left-side">
+            <p class="main__top__from__title main-from-title">Texto Normal</p>
+          </div>
+          <button id="reverse-btn" class="main__top__reverse-btn button-icon">
+            <svg
+              class="w-[32px] h-[32px] text-gray-800 dark:text-white icon"
+              aria-hidden="true"
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              fill="none"
+              viewBox="0 0 24 24"
+            >
+              <path
+                stroke="currentColor"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="1.5"
+                d="M4 16h13M4 16l4-4m-4 4 4 4M20 8H7m13 0-4 4m4-4-4-4"
+              />
+            </svg>
+          </button>
+          <div class="main__top__to right-side">
+            <p class="main__top__to__title main-to-title">Texto Encriptado</p>
+          </div>
+        </section>
+        <section class="main__bottom">
+          <div class="main__bottom__left left-side">
+            <p class="main__bottom__left__title main-from-title">
+              Texto Normal
+            </p>
+            <textarea
+              type="text"
+              name="input"
+              class="main__bottom__left__input"
+              id="main-from-input"
+              placeholder="Escribe algo..."
+            ></textarea>
+            <div class="main__bottom__left__actions actions">
+              <button id="clear-btn" class="actions__clear button-icon">
+                <svg
+                  class="actions__clear__icon icon"
+                  aria-hidden="true"
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    stroke="currentColor"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="1.5"
+                    d="M5 7h14m-9 3v8m4-8v8M10 3h4a1 1 0 0 1 1 1v3H9V4a1 1 0 0 1 1-1ZM6 7h12v13a1 1 0 0 1-1 1H7a1 1 0 0 1-1-1V7Z"
+                  />
+                </svg>
+              </button>
+            </div>
+          </div>
+          <div class="main__bottom__right right-side">
+            <p class="main__bottom__right__title main-to-title">
+              Texto Encriptado
+            </p>
+            <textarea
+              type="text"
+              name="input"
+              class="main__bottom__right__input"
+              id="main-to-input"
+              placeholder="..."
+              disabled
+            ></textarea>
+            <div class="main__bottom__right__actions actions">
+              <button id="copy-btn" class="actions__copy button-icon">
+                <svg
+                  class="actions__copy__icon icon"
+                  aria-hidden="true"
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    stroke="currentColor"
+                    stroke-linejoin="round"
+                    stroke-width="1.5"
+                    d="M9 8v3a1 1 0 0 1-1 1H5m11 4h2a1 1 0 0 0 1-1V5a1 1 0 0 0-1-1h-7a1 1 0 0 0-1 1v1m4 3v10a1 1 0 0 1-1 1H6a1 1 0 0 1-1-1v-7.13a1 1 0 0 1 .24-.65L7.7 8.35A1 1 0 0 1 8.46 8H13a1 1 0 0 1 1 1Z"
+                  />
+                </svg>
+              </button>
+            </div>
+          </div>
+        </section>
+      </main>
     </div>
   </body>
 </html>
