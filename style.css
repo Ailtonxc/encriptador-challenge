@@ -23,3 +23,42 @@
     height: 100vh;
     background: var(--bg-gradient);
   }
+
+  p, button, textarea {
+    color: var(--fg-primary);
+  }
+  
+  .container {
+    width: 100%;
+    height: 100%;
+    max-width: 1280px;
+    margin: 0 auto;
+  }
+  
+  /* HEADER */
+  
+  .header {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 15%;
+  }
+  
+  .header__title {
+    color: var(--fg-primary);
+    font-size: var(--font-size-title);
+  }
+  
+  .header__icon-link {
+    fill: var(--fg-primary);
+  }
+  
+  .header__icon-link:hover {
+    opacity: 0.9;
+  }
+  
+  .icon {
+    width: 32px;
+    height: 32px;
+  }
