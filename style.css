@@ -169,3 +169,18 @@
     text-transform: lowercase;
     scrollbar-width: none;
   }
+
+  /* FOOTER */
+
+.footer {
+    padding: 24px;
+    width: 100%;
+    height: 15%;
+    display: grid;
+    place-content: center;
+  }
+  
+  .footer__text {
+    color: var(--fg-secondary);
+    text-align: center;
+  }
