@@ -11,6 +11,8 @@ const reverse_btn = document.querySelector("#reverse-btn");
 const clear_btn = document.querySelector("#clear-btn");
 const copy_btn = document.querySelector("#copy-btn");
 
+let decrypt_flag = false; // Valor para validar en la logica se esta encriptando o desencriotando
+
 const letters_matrix = [
   ["a", "0&1"], // La a se convierte en 0&1
   ["e", "1@2"], // La e se convierte en 1@2
@@ -23,13 +25,33 @@ function convert(input_text) {
   input_text = input_text.toLowerCase();
 
   for (let index = 0; index < letters_matrix.length; index++)
-    input_text = input_text.replaceAll(letters_matrix[index][0], letters_matrix[index][1]);
+    if (decrypt_flag) input_text = input_text.replaceAll(letters_matrix[index][1], letters_matrix[index][0]);
+    else input_text = input_text.replaceAll(letters_matrix[index][0], letters_matrix[index][1]);
 
   return input_text;
 }
 
 input_from.addEventListener("keyup", (e) => {
   input_to.value = convert(e.target.value);
+});
+
+reverse_btn.addEventListener("click", () => {
+  decrypt_flag = !decrypt_flag;
+
+  input_from.value = input_to.value;
+  input_to.value = convert(input_from.value);
+
+  if (decrypt_flag) {
+    a_title_from[0].innerHTML = encrypt_text;
+    a_title_from[1].innerHTML = encrypt_text;
+    a_title_to[0].innerHTML = normal_text;
+    a_title_to[1].innerHTML = normal_text;
+  } else {
+    a_title_from[0].innerHTML = normal_text;
+    a_title_from[1].innerHTML = normal_text;
+    a_title_to[0].innerHTML = encrypt_text;
+    a_title_to[1].innerHTML = encrypt_text;
+  }
 });
 
 clear_btn.addEventListener("click", () => {
